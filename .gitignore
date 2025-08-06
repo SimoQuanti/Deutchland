@@ -1,0 +1,21 @@
+# Ignore compiled Python files and caches
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+env/
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
