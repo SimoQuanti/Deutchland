@@ -27,6 +27,18 @@ import json
 import random
 import datetime
 from typing import List, Dict, Any, Tuple
+# Import pygame at the module level so it is available throughout the file.
+# Some helper classes (e.g. Button) refer to ``pygame`` directly.  Without
+# a module‑level import, ``pygame`` would be undefined outside of functions
+# that import it locally (see issue #1).  We still call ``check_dependencies``
+# in ``DeutschlandGUI`` to validate that the required libraries are
+# installed and to provide a clear error message if they are missing.
+try:
+    import pygame  # noqa: F401
+except Exception:
+    # Defer the import error until check_dependencies() is called.
+    pygame = None  # type: ignore[assignment]
+
 
 # Importa le strutture dati dal modulo esistente
 from data import (
